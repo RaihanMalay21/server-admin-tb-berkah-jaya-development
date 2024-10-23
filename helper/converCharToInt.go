@@ -12,7 +12,7 @@ func ConvertionToIntWithourChar(values string) (int, error) {
 	// men konversikan menjadi integer
 	valueint, err := strconv.Atoi(valueString)
 	if err != nil {
-		return 0, nil
+		return 0, err
 	}
 
 	return valueint, nil

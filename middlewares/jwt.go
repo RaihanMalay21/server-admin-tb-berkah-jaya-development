@@ -15,7 +15,7 @@ func JWTMiddleware(next http.Handler) http.Handler {
 		message := map[string]interface{}{
 			"message": nil,
 		}
-
+		
 		c, err := r.Cookie("token")
 		if err != nil {
 			log.Println("Missing token cookie:", err)
@@ -98,6 +98,8 @@ func endPoinCanAccess(role, endpoint string) error {
 			}
 		}
 	}
+
+	fmt.Println(role, endpoint)
 
 	return fmt.Errorf("access denied to endpoint: %s", endpoint)
 }
