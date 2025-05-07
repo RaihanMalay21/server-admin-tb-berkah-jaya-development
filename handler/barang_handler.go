@@ -21,7 +21,7 @@ func (svc *BarangHandler) GetAllBarang(w http.ResponseWriter, r *http.Request) {
 		helper.Response(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
+	
 	helper.Response(w, datas, http.StatusOK) 
 }
 
